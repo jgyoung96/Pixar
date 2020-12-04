@@ -1,0 +1,249 @@
+        :root{
+            --gray : #4E4E4E;
+            --red : #F54747;
+            --white : #FFFFFF;
+            --black : #000000;
+        }
+        .bo{
+            border: 1px solid red;
+        }
+        body{
+            font-family: 'Quicksand', sans-serif;
+            font-weight: bold;
+            line-height: 1em;
+            /*text-transform: uppercase;*/
+            letter-spacing: .15em;
+            font-size: 16px;
+        }
+         /*10. 캐로셀 밖으로 인디케이터 흘러 넘쳐도 숨겨서 스크롤 생기지 않도록 설정*/
+         #topCarousel{
+            overflow: hidden;
+         }
+
+        /*5. 캐로셀 안의 이미지 사이즈를 동일하게 맞추거나 화면높이에 이미지 높이 맞추기*/
+        #topCarousel .carousel-item:nth-of-type(1){
+            background: url(../img/carousel_01.jpg) no-repeat center top/ cover;
+            height: 100vh;
+        }
+        #topCarousel .carousel-item:nth-of-type(2){
+            background: url(../img/carousel_02.jpg) no-repeat center top/ cover;
+            height: 100vh;
+        }
+        #topCarousel .carousel-item:nth-of-type(3){
+            background: url(../img/carousel_03.jpg) no-repeat center top / cover;
+            height: 100vh;
+        }
+        #topCarousel .carousel-item:nth-of-type(4){
+            background: url(../img/carousel_04.jpg) no-repeat center top / cover;
+            height: 100vh;
+        }
+
+        /*7. 캐로셀 안에 캡션대신 넣은 이미지 위치 맞추기*/
+         #topCarousel .carousel-caption{
+            position: absolute;
+            bottom: 100px;
+         }
+         #topCarousel .carousel-caption h1{
+            text-align: center;
+            position: relative;
+            white-space: pre-wrap;
+            bottom: 330px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 900;
+            font-style: normal;
+            font-size: 51px;
+            letter-spacing: .29em;
+            line-height: 1em;
+            text-transform: uppercase;
+
+         }
+        section#feature .container .row h1{
+            position: relative;
+            top: 105px;
+            line-height: 1em;
+            font-size: 4rem;
+            font-family: 'Raleway', sans-serif;
+            letter-spacing: .29em;
+            opacity: 0.9;
+         }
+         section#renderman .container .row h1{
+            position: relative;
+            top: 170px;
+            line-height: 1em;
+            font-size: 4rem;
+            font-family: 'Raleway', sans-serif;
+            letter-spacing: .29em;
+            opacity: 0.9;
+         }
+         @font-face {
+          font-family: Cocogoose Classic Extra Bold;
+          src: url(../font/Cocogoose Classic Extra Bold.otf);
+        }
+
+         /*8. 캐로셀 배경 이미지를 어둡게 하여 위의 이미지 컨텐츠 부각시키기*/
+         #topCarousel .carousel-item::after{
+            content:"";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.4;
+         }
+
+         /*9. 캐로셀 좌우 버튼을 마우스를 올리면 나타나도록 설정*/
+         #topCarousel .carousel-control-next{
+            right: -200px;
+            transition: right 1s;
+         }
+         #topCarousel .carousel-control-prev{
+            left: -200px;
+            transition: left 1s;
+         }
+          #topCarousel:hover .carousel-control-next{
+            right: 0px;
+         }
+         #topCarousel:hover .carousel-control-prev{
+            left: 0px;
+         }
+
+         /*11. 캐로셀 좌우 버튼 호버시 색상 바꾸기*/
+         #topCarousel .carousel-control-next:hover,
+         #topCarousel .carousel-control-prev:hover{
+            color: var(--white);
+         }
+
+         /*12. 캐로셀 하단 인디케이터 버튼 활성화시 스타일 변경*/
+         #topCarousel .carousel-indicators li.active{
+            background-color : var(--white);
+         }
+         /*16. loading img 위치 잡기*/
+         .loading .d-flex img{
+            position: absolute;
+            top: 50%;
+            width: 200px;
+            margin-top: -48px;
+
+         }
+         .loading{
+            height: 100vh;
+         }
+         /*<!-- 22.navbar 배경색 customize -->*/
+         .bg-white{
+            background-color: var(--white);
+         }
+        
+        /*26.네브바의 height 설정*/
+        .navbar-nav .nav-link{
+            padding-bottom: 50px;
+            padding-top: 50px;
+        }
+        .navbar-light .navbar-nav .nav-link {
+            color: #2B2B2B;
+        }
+        .navbar-light .navbar-nav .nav-link:hover{
+            color: #238AC7;
+        }
+        
+        hr{
+            width: 250px;
+        }
+        section#feature{
+            background: url(../img/pixar-wallpaper-4.jpg) no-repeat bottom/ cover fixed;
+            padding: 80px;
+            background-attachment: fixed;
+            height: 720px;
+            
+        }
+        /*29. 세번째 메뉴의 배경이미지*/
+        section#renderman{
+            background: url(../img/menu3_about_bg.jpg) no-repeat bottom/ contain fixed;
+            padding: 120px;
+            background-attachment: fixed;
+            height: 660px;
+        }
+        /*34.scrollspy를 위한 설정*/
+        body{
+            position: relative;
+        }
+        /*39. 윈도우 창에 가로스크롤 생기는 부분 처리*/
+        /*53. 로딩시 가로 세로 스크롤 모두 없애기*/
+        html,body{
+            /*overflow-x: hidden;*/
+            overflow: hidden;
+        }
+        /*42. 다섯번째 메뉴의 배경이미지*/
+        section#video{
+           /* background: url(../img/menu4_background_bg.jpg) no-repeat center / cover fixed;*/
+            padding: 40px;
+
+         }
+         /*52. card-body안의 텍스트 스타일*/
+         .card-body .card-title{
+            color: var(--black);
+         }
+         .card-body .card-text::before{
+            content:" ";
+            width: 70%;
+            height: 3px;
+            background-color: #86E374;
+            display: block;
+            margin-bottom: 10px;
+         }
+
+         /*59. 마지막 하단의 배경이미지*/
+         section#contect{
+            background : url(../img/menu7_background_bg.jpg) no-repeat top / cover fixed;
+            /*padding: 160px;*/
+            padding-top: 160px;
+            padding-bottom: 160px;
+         }
+         .btn-black{
+            background-color: #8E8E8E;
+            color: white;
+            opacity: 0.8;
+         }
+         .form-control::placeholder{
+            color: white;
+         }
+         #inputState option{
+            color: black;
+         }
+         .bg-black{
+            background-color: #212121;
+         }
+         /*64.waypoint가 작동하기 전 원하는 요소들을 보이지 않도록 설정*/
+         .wp1, .wp2, .wp3, .wp4, .wp5, .wp6, .wp7,
+         .wp8, .wp9, .wp10, .wp11, .wp12, .wp13, 
+         .wp14, .wp15, .wp16, .wp17, .wp18, .wp19,
+         .wp20, .wp21, .wp22, .wp23, .wp24, .wp25, 
+         .wp26, .wp27, .wp28, .wp29{
+            visibility: hidden;
+
+         }
+         /*65번 visibility를 hidden으로 줄때 css에 추가*/
+         .animate__animated{
+            visibility: visible;
+         }
+         .reder_txt{
+            color: #777777;
+
+         }
+        .render_txt2{
+            opacity: 0.8;
+        }
+        .op_txt{
+             opacity: 0.8;
+        }
+        .embed-responsive-21by9 {
+            width: 1280px;
+            height: 532px;
+            position: relative;
+            left: 50%;
+            margin-left: -640px;
+            
+        }
+       .navbar-light .navbar-nav .active>
+       .nav-link, .navbar-light .navbar-nav .nav-link.active, 
+       .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+            color: #238AC7;
+        }   
